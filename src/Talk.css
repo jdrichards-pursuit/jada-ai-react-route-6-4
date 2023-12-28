@@ -1,0 +1,67 @@
+textarea {
+  width: 90%s;
+}
+
+#brain {
+  display: block;
+  width: 250px;
+  height: 250px;
+  border: 5px solid white;
+  border-radius: 50%;
+
+  /* box-shadow: 5px 5px 5px 5px yellow; */
+  margin: 0 auto;
+
+  animation: talker 7s infinite linear;
+  /* animation-name: talker;
+  animation-duration: 7s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+}
+
+@keyframes talker {
+  0% {
+    transform: rotate(0);
+
+    box-shadow: 5px 5px 5px 5px rgba(177, 94, 233, 0.6);
+    width: 250px;
+    height: 250px;
+    top: 10px;
+  }
+
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 5px 5px 5px 5px rgba(177, 94, 233, 0.4);
+    width: 180px;
+    height: 250px;
+    top: 10px;
+  }
+
+  70% {
+    box-shadow: 5px 5px 5px 5px rgba(177, 94, 233, 0);
+    width: 220px;
+  }
+
+  90% {
+    box-shadow: 5px 5px 5px 5px rgba(177, 94, 233, 0.4);
+    width: 235px;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 5px 5px 5px 5px rgba(177, 94, 233, 0.6);
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brain-wrapper {
+    display: none;
+  }
+
+  textarea {
+    width: 80%;
+    /* padding: 20px; */
+  }
+}

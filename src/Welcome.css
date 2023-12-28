@@ -1,0 +1,70 @@
+#diva {
+  margin-bottom: 0;
+  margin-top: -150px;
+  border: 1px solid white;
+  clip-path: polygon(50% 15%, 100% 50%, 50% 80%, 0 50%);
+}
+
+.welcome-fade {
+  font-size: 150px;
+  animation: fadeIn 10s;
+}
+
+.sky-fade {
+  animation: skyFade 5s;
+}
+
+#diva {
+  animation: diva 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes skyFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes diva {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 885px) {
+  #diva {
+    margin-bottom: 0;
+    /* margin-top: -100px; */
+    margin-top: 10px;
+    height: 700px;
+    width: auto;
+  }
+
+  .sky-fade {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 885px) {
+  #diva {
+    /* margin-bottom: 0; */
+    /* margin-top: -100px; */
+    margin-top: 10px;
+    height: 300px;
+    width: auto;
+  }
+}
