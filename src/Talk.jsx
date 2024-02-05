@@ -1,18 +1,18 @@
-import { useRef } from "react";
+import { useRef } from 'react'
 // import { signal } from "@preact/signals-react";
-import { Form, useActionData } from "react-router-dom";
-import TalkOutput from "./TalkOutput";
+import { Form, useActionData } from 'react-router-dom'
+import TalkOutput from './TalkOutput'
 
-import { fetchData } from "./util/dataSoundPractice";
+import { fetchData } from './util/dataSoundThreeFiveTurbo'
 
-import "./Talk.css";
+import './Talk.css'
 
 const Talk = () => {
-  const data = useActionData();
-  const inputRef = useRef(null);
+  const data = useActionData()
+  const inputRef = useRef(null)
 
   if (inputRef.current) {
-    inputRef.current.value = "";
+    inputRef.current.value = ''
   }
 
   return (
@@ -20,8 +20,8 @@ const Talk = () => {
       <section
         className="widen bg-dark bg-size-cover bg-repeat-0 bg-position-center position-relative  py-5"
         style={{
-          backgroundImage: "url(assets/img/landing/saas-3/hero/hero-bg.jpg)",
-          height: "100vh"
+          backgroundImage: 'url(assets/img/landing/saas-3/hero/hero-bg.jpg)',
+          height: '100vh',
         }}
         data-bs-theme="dark"
       >
@@ -54,16 +54,16 @@ const Talk = () => {
             {/* Parallax gfx */}
             <div
               style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "start"
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'start',
               }}
               className="col-xl-5 col-md-6 d-md-flex"
             >
               <div
                 // className="parallax mx-auto ms-md-0 me-md-n5"
-                style={{ maxWidth: 675, height: "70vh" }}
+                style={{ maxWidth: 675, height: '70vh' }}
               >
                 <div>
                   <div
@@ -71,7 +71,7 @@ const Talk = () => {
                     style={{
                       height: 250,
                       width: 500,
-                      margin: "0 auto"
+                      margin: '0 auto',
                     }}
                   >
                     <img
@@ -91,16 +91,16 @@ const Talk = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Talk;
+export default Talk
 
 export async function action({ request }) {
-  console.log("hello action");
-  const formData = await request.formData();
+  console.log('hello action')
+  const formData = await request.formData()
 
-  const reply = await fetchData(formData.get("query"));
+  const reply = await fetchData(formData.get('query'))
 
-  return reply;
+  return reply
 }
